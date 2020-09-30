@@ -65,13 +65,13 @@ Cruise set a 10-year deadline for himself in which to build an acting career. He
 
 His role in Taps was upgraded after director Harold Becker saw Cruise's potential, and his performance caught the attention of a number of critics and filmmakers. In 1983, Cruise appeared in Francis Ford Coppola's The Outsiders, which also starred Emilio Estevez, Matt Dillon and Rob Lowe—all prominent members of a group of young actors the entertainment press dubbed the Brat Pack.The film was not well received, but it allowed Cruise to work with an acclaimed director on a high-profile project." )
 
-u1 = User.create(name: "yahya")
+u1 = User.create(name: "yahya", password_digest: 12)
 
-u2 = User.create(name: "Ureil")
+u2 = User.create(name: "Ureil", password_digest: 1)
 
-u3 = User.create(name: "Samantha")
+u3 = User.create(name: "Samantha", password_digest: 1234)
 
-u4 = User.create(name: "uba")
+u4 = User.create(name: "uba", password_digest: 11)
 
 l1 = Like.create( user_id: u1.id, actor_id: a2.id   )
 

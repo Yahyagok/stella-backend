@@ -6,6 +6,6 @@ class UserSerializer
   has_many :actors, through: :comments
   has_many :favorites
   has_many :actors, through: :favorites
-  attributes :name
+  attributes :name, :password_digest
 end
 
