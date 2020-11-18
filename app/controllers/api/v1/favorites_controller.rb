@@ -28,9 +28,9 @@ class Api::V1::FavoritesController < ApplicationController
 
 
     def create 
-        comment = Comment.new(comment_params)
+        favorite = Favorite.new(favorite_params)
         if comment.save 
-            render json: comment, status: :accepted
+            render json: FavoriteSerializer.new(favorite), status: :accepted
         else
             render json: { errors: comment.errors.full_messages}, status: :unprocessible_entity
         end

@@ -30,7 +30,7 @@ class Api::V1::CitiesController < ApplicationController
     def create 
         city = City.new(city_params)
         if city.save 
-            render json: city, status: :accepted
+            render json: CitySerializer.new(city), status: :accepted
         else
             render json: { errors: city.errors.full_messages}, status: :unprocessible_entity
         end

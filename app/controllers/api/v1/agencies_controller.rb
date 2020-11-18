@@ -30,7 +30,7 @@ class Api::V1::AgenciesController < ApplicationController
     def create 
         agency = Agency.new(agency_params)
         if agency.save 
-            render json: agency, status: :accepted
+            render json: AgencySerializer.new(agency), status: :accepted
         else
             render json: { errors: agency.errors.full_messages}, status: :unprocessible_entity
         end

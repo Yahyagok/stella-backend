@@ -14,7 +14,7 @@ class Api::V1::CommentsController < ApplicationController
     def update 
         comment.update(comment_params)
         if comment.save 
-            render json: CommnetSerializer.new(comment), status: :accepted
+            render json: comment, status: :accepted
         else
             render json: { errors: comment.errors.full_messages }, status: :unprocessible_entity
 
@@ -30,7 +30,7 @@ class Api::V1::CommentsController < ApplicationController
     def create 
         comment = Comment.new(comment_params)
         if comment.save 
-            render json: comment, status: :accepted
+            render json: CommentSerializer.new(comment), status: :accepted
         else
             render json: { errors: comment.errors.full_messages}, status: :unprocessible_entity
         end
@@ -39,7 +39,7 @@ class Api::V1::CommentsController < ApplicationController
     private
 
     def comment_params
-        params.require(:comment).permit(:user_id, :actor_id)
+        params.require(:comment).permit(:user_id, :actor_id, :review)
     end 
 
     def find_comment

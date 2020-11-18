@@ -18,7 +18,6 @@ class Api::V1::ActorsController < ApplicationController
             render json: ActorSerializer.new(actor), status: :accepted
         else
             render json: { errors: actor.errors.full_messages }, status: :unprocessible_entity
-
         end 
     end 
 
@@ -29,9 +28,11 @@ class Api::V1::ActorsController < ApplicationController
 
 
     def create 
+        
         actor = Actor.new(actor_params)
+     
         if actor.save 
-            render json: actor, status: :accepted
+            render json: ActorSerializer.new(actor), status: :accepted
         else
             render json: { errors: actor.errors.full_messages}, status: :unprocessible_entity
         end
@@ -40,7 +41,7 @@ class Api::V1::ActorsController < ApplicationController
     private
 
     def actor_params
-        params.require(:actor).permit(:name, :image, :contact_info, :city_id, :agency_id, :movies, :description )
+        params.require(:actor).permit(:name, :image, :contact_info, :city_id, :agency_id, :description )
     end 
 
     def find_actor 

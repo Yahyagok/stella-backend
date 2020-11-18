@@ -30,7 +30,7 @@ class Api::V1::LikesController < ApplicationController
     def create 
         like = Like.new(like_params)
         if like.save 
-            render json: like, status: :accepted
+            render json: LikeSerializer.new(like), status: :accepted
         else
             render json: { errors: like.errors.full_messages}, status: :unprocessible_entity
         end

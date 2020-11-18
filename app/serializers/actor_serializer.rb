@@ -8,5 +8,5 @@ class ActorSerializer
   has_many :users, through: :comments
   has_many :favorites
   has_many :users, through: :favorites
-  attributes :name, :image, :contact_info, :city_id, :agency_id, :movies, :description
+  attributes :name, :image, :contact_info, :city, :agency, :description
 end
