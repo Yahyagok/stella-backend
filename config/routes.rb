@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
   get '/logged_in', to: 'sessions#is_logged_in?'
 
+  get '/auto_login', to:"sessions#auto_login"
+
   namespace :api do
     namespace :v1 do
       resources :actors, only: [:index, :show, :create, :update, :destroy]

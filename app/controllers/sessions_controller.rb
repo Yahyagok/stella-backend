@@ -42,6 +42,16 @@ class SessionsController < ApplicationController
         }
       end
 
+    def auto_login
+      @user = User.find_by(id: request.headers["Authorization"])
+
+      if @user 
+      render json: @user
+      else 
+        render json: { errors: "There is no such user" }
+      end
+    end
+
     private
 
     def session_params
