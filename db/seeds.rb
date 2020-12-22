@@ -70,6 +70,48 @@ Cruise set a 10-year deadline for himself in which to build an acting career. He
 
 His role in Taps was upgraded after director Harold Becker saw Cruise's potential, and his performance caught the attention of a number of critics and filmmakers. In 1983, Cruise appeared in Francis Ford Coppola's The Outsiders, which also starred Emilio Estevez, Matt Dillon and Rob Lowe—all prominent members of a group of young actors the entertainment press dubbed the Brat Pack.The film was not well received, but it allowed Cruise to work with an acclaimed director on a high-profile project." )
 
+a4 = Actor.create(name: "Airicia Reynols", image: "Airicia-Reynolds.jpg", contact_info: 13474454545, city_id: c2.id, agency_id: agency2.id, description: "She is born in Philedelphia. she is 13 year old. She likes to do gym and sport activities")
+
+a5 = Actor.create(name: "Aoife Jordan", image:"Aoife Jordan.png", contact_info: 13403454343, city_id: c3.id, agency_id: agency3.id, description: "She was born in Westminster. she is 20 year old. She look forward to get opportunities as a new actress"  )
+
+a6 = Actor.create(name: "Benito Skinner", image:"Benote-Skinner.jpg", contact_info: 443453432, city_id: c4.id, agency_id: agency2.id, description: "Benito Skinner, also known as Benny Drama, writes and produces the kind of parody videos that will have you cackling over your phone in your bedroom in the middle of the night. From skits like “Lizzie McGuire is BACK!” and “The *REAL* Dumbledore” to his reads on what it’s like to date each zodiac sign, Skinner brings full commitment to his comedy. As the name suggests, drama is his forte.
+
+“I’m moved by people being themselves. No reservations, no edits. Nasty shit! I love it,” said Skinner. “I find inspiration in moments that challenge our ideas on what it means to be loved or accepted. It started for me when I was closeted in high school, but today it manifests itself in everything from the absurd avatars we create for ourselves online to pop culture broadly.”
+
+Comedy has always been part of Skinner’s life. As a kid he would recite the pie scene from Mrs. Doubtfire over and over again for his family. “You know, the one where Robin Williams pretends the pie filling is a face mask to hide his true identity,” he said. “There’s a lot to unpack about my love of that scene.” He cites Williams as a major influence, along with Lana Del Rey for her interpretation of nostalgic Americana. Try to picture the center of that Venn Diagram and you’ll get the sensibility of his videos, which he often writes and produces with his boyfriend, Terry O’Connor.
+
+
+Skinner is currently writing his next live show, which will be more personal and focus less on his characters, and waiting for the development of his pilot. And he’s been giving his green screen lots of love during shelter-in-place, so plenty of videos are on the way. We spoke with him about otters, skin care, and Dumbledore.
+
+What would your Real Housewives tagline be?
+“I da ho”? Yeah, that sounds about right.
+
+If you were running for office, what would your campaign song be and why?
+“National Anthem” by Lana Del Rey because that’s actually the official song of the United States of America.
+
+What kind of animal would you be and why?
+An otter. They are SO queer, OMG. They love self-grooming, are extremely needy, and also part psycho. It … me.
+
+What are the last three songs you’ve listened to?
+“Levitating” by Dua Lipa, “The Steps” by HAIM, and “Chelsea Hotel No. 2” cover by Lana Del Rey (gets me in my feelings!)
+
+If you could master any skill that isn’t related to your current job, what would it be and why?
+I think I’d want to be a certified dermatologist. I care about skin more than … anything? I had cystic acne in college and literally spent the next three years reading too many articles about skin care. And I think it also requires making people feel good. When my siblings or friends come to me with skin concerns, I’m like Drama M.D. in the haus — come to mama!!!
+
+What goals are you working toward at the moment?
+I want to make something that honestly reflects the queer experience right now. Hopefully, I will do that with the pilot and live show I’m working on. Fingers crossed, girlies!
+
+What three fictional characters do you relate to most?
+SpongeBob, because he was my first introduction to femininity and masculinity coexisting in a way that was depicted positively. I loved that he had a high-pitched voice. Made me feel seen in a way that I probably didn’t understand at the time.
+
+Dumbledore, because he was so secretive, like a true gay Scorpio. And chic!
+
+The token gay student from School of Rock. I swear to God, that queen got absolutely robbed for not winning something for that performance. I gulped every time he was onscreen as a kid because I was like, yep, that’s me! “You’re tacky and I hate you” should have been my senior quote.
+
+What piece of advice has had the biggest impact on you and why?
+It’s not what you say to people, but how you make them feel. I think about that line probably too much. I want my work to always make people feel good. Yes, obviously the words matter. But I really just want to give people that escape. Comedy can bring us together in a very bizarre and special way, so I feel lucky to be apart of that." )
+
+
 u1 = User.create(name: "yahya", password: "12")
 
 u2 = User.create(name: "Ureil", password: "1" )

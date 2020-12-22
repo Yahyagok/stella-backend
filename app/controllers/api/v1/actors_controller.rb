@@ -8,7 +8,6 @@ class Api::V1::ActorsController < ApplicationController
     end 
 
     def show 
-
         render json: actor
     end   
     
@@ -20,17 +19,13 @@ class Api::V1::ActorsController < ApplicationController
             render json: { errors: actor.errors.full_messages }, status: :unprocessible_entity
         end 
     end 
-
-    
+   
     def destroy
         actor.destroy
     end 
 
-
-    def create 
-        
+    def create    
         actor = Actor.new(actor_params)
-     
         if actor.save 
             render json: ActorSerializer.new(actor), status: :accepted
         else
@@ -47,6 +42,6 @@ class Api::V1::ActorsController < ApplicationController
     def find_actor 
         actor = Actor.find(params[:id])
 
-        render json: actor
+       
     end 
 end

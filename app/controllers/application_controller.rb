@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base # that was API not Base and
      skip_before_action :verify_authenticity_token
   
 
-     helper_method :login!, :logged_in?, :current_user, :authorized_user?, :logout!
+     helper_method :login!, :logged_in?, :current_user, :authorized_user?, :logout!, :already_liked?
 
   def login!
       session[:user_id] = @user.id
@@ -17,6 +17,7 @@ class ApplicationController < ActionController::Base # that was API not Base and
       
 
     end
+  
 
   def authorized_user?
        @user == @current_user
@@ -25,4 +26,9 @@ class ApplicationController < ActionController::Base # that was API not Base and
   def logout!
        session.clear
      end
+
+     def already_liked?
+      Like.where(user_id: params[:user_id], actor_id:
+      params[:actor_id]).exists?
+    end
 end
