@@ -1,7 +1,6 @@
 class Api::V1::LikesController < ApplicationController
     before_action :find_like, only: [:show, :update, :destroy]
 
-
     def index 
         likes = Like.all
         render json: LikeSerializer.new(likes)
@@ -13,7 +12,7 @@ class Api::V1::LikesController < ApplicationController
     end   
     
     def update 
-        like.update(comment_params)
+        like.update(like_params)
         if like.save 
             render json: LikeSerializer.new(like), status: :accepted
         else
@@ -22,15 +21,12 @@ class Api::V1::LikesController < ApplicationController
         end 
     end 
 
-    
     def destroy
         like.destroy
     end 
 
-
     def create 
         like = Like.new(like_params)
-     
         if already_liked?
           render json: { errors: like.errors.full_messages}, status: :unprocessible_entity 
         elsif  like.save 
@@ -41,8 +37,6 @@ class Api::V1::LikesController < ApplicationController
     end 
 
     private
-
-  
 
     def like_params
         params.require(:like).permit(:user_id, :actor_id)

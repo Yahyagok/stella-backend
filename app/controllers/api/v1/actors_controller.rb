@@ -1,7 +1,5 @@
 class Api::V1::ActorsController < ApplicationController
-
     before_action :find_actor, only: [:show, :update, :destroy]
-
     def index 
         actors = Actor.all
         render json: ActorSerializer.new(actors)
@@ -10,7 +8,7 @@ class Api::V1::ActorsController < ApplicationController
     def show 
         render json: actor
     end   
-    
+
     def update 
         actor.update(actor_params)
         if actor.save 
@@ -18,30 +16,47 @@ class Api::V1::ActorsController < ApplicationController
         else
             render json: { errors: actor.errors.full_messages }, status: :unprocessible_entity
         end 
-    end 
-   
+    end   
+
     def destroy
         actor.destroy
     end 
 
-    def create    
+    def create
+        # binding.pry
+        # if params[:file]
+        #     @image_element.image.attach([:file])
+        #     photo = url_for(image_element.image)
+        # elsif params[:image_url]
+        #     blob = ActiveStorage::Blob.create_after_upload!(
+        #         io: StringIO.new((Base64.decode64(params[:image_url].split(",")[1]))),
+        #         filename: "actor.png",
+        #         content_type: "image/png, image/jpeg, image/jpg",
+        #       )
+        #       @image_element.image.attach(blob)
+        #       photo = url_for(image_element.image)
+        # else 
+        #     photo = photo_params[:photo]
+        # end 
+
         actor = Actor.new(actor_params)
+        # binding.pry
+
         if actor.save 
             render json: ActorSerializer.new(actor), status: :accepted
+            # binding.pry
         else
             render json: { errors: actor.errors.full_messages}, status: :unprocessible_entity
         end
     end 
 
     private
-
     def actor_params
-        params.require(:actor).permit(:name, :image, :contact_info, :city_id, :agency_id, :description )
+        params.permit(:name, :image_url, :image, :contact_info, :city_id, :agency_id, :description )
     end 
 
     def find_actor 
-        actor = Actor.find(params[:id])
-
-       
+        actor = Actor.find(params[:id])   
+        render json: ActorSerializer.new(actor)
     end 
 end

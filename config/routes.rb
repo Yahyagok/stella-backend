@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
+      resources :image_elements,  only: [:index, :show, :create, :update, :destroy]
       resources :actors, only: [:index, :show, :create, :update, :destroy]
       resources :agencies, only: [:index, :show, :create, :update, :destroy]
       resources :cities, only: [:index, :show, :create, :update, :destroy ]
