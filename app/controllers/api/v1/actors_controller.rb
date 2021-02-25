@@ -24,22 +24,24 @@ class Api::V1::ActorsController < ApplicationController
 
     def create
         # binding.pry
+    
+        actor = Actor.new(actor_params)
         # if params[:file]
-        #     @image_element.image.attach([:file])
-        #     photo = url_for(image_element.image)
+        #     actor.image_element.image.attach([:file])
+        #     photo = url_for(actor.image_element.image)
         # elsif params[:image_url]
         #     blob = ActiveStorage::Blob.create_after_upload!(
         #         io: StringIO.new((Base64.decode64(params[:image_url].split(",")[1]))),
         #         filename: "actor.png",
         #         content_type: "image/png, image/jpeg, image/jpg",
         #       )
-        #       @image_element.image.attach(blob)
-        #       photo = url_for(image_element.image)
+        #       binding.pry
+        #       actor.image_element.image.attach(blob)
+        #       photo = url_for(actor.image_element.image)
         # else 
         #     photo = photo_params[:photo]
         # end 
 
-        actor = Actor.new(actor_params)
         # binding.pry
 
         if actor.save 
