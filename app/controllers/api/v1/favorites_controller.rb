@@ -29,23 +29,23 @@ class Api::V1::FavoritesController < ApplicationController
 
     def create 
         favorite = Favorite.new(favorite_params)
-        if comment.save 
+        if favorite.save 
             render json: FavoriteSerializer.new(favorite), status: :accepted
         else
-            render json: { errors: comment.errors.full_messages}, status: :unprocessible_entity
+            render json: { errors: favorite.errors.full_messages}, status: :unprocessible_entity
         end
     end 
 
     private
 
-    def comment_params
-        params.require(:comment).permit(:user_id, :actor_id)
+    def favorite_params
+        params.require(:favorite).permit(:user_id, :actor_id)
     end 
 
-    def find_comment
-        comment = Comment.find(params[:id])
+    def find_favorite
+        favorite = Favorite.find(params[:id])
 
-        render json: comment
+        render json: FavoriteSerializer.new(favorite)
     end 
 
 end

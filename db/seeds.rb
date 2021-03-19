@@ -95,7 +95,7 @@ What goals are you working toward at the moment?
 I want to make something that honestly reflects the queer experience right now. Hopefully, I will do that with the pilot and live show I’m working on. Fingers crossed, girlies!
 
 What three fictional characters do you relate to most?
-SpongeBob, because he was my first introduction to femininity and masculinity coexisting in a way that was depicted positively. I loved that he had a high-pitched voice. Made me feel seen in a way that I probably didn’t understand at the time.
+SpongeBob, because he was my first introduction to femininity and masculinity coexisting in a way that was depicted positively. I loved that he had a high-pitched voice. Made me feel seen in a way that I probably didn’t understand at the time.]
 
 Dumbledore, because he was so secretive, like a true gay Scorpio. And chic!
 

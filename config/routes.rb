@@ -14,7 +14,7 @@ Rails.application.routes.draw do
       resources :actors, only: [:index, :show, :create, :update, :destroy]
       resources :agencies, only: [:index, :show, :create, :update, :destroy]
       resources :cities, only: [:index, :show, :create, :update, :destroy ]
-      resources :users, only: [:index, :show,  :create]
+      resources :users, only: [:index, :show, :update,  :create]
       resources :likes, only: [:index,:show, :update, :create, :destroy]
       resources :comments, only: [:index,:show, :update, :create, :destroy]
       resources :favorites, only: [:index,:show, :update, :create, :destroy]
