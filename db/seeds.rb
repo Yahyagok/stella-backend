@@ -104,7 +104,6 @@ The token gay student from School of Rock. I swear to God, that queen got absolu
 What piece of advice has had the biggest impact on you and why?
 It’s not what you say to people, but how you make them feel. I think about that line probably too much. I want my work to always make people feel good. Yes, obviously the words matter. But I really just want to give people that escape. Comedy can bring us together in a very bizarre and special way, so I feel lucky to be apart of that." )
 
-
 u1 = User.create(name: "yahya", password: "12")
 
 u2 = User.create(name: "Ureil", password: "1" )
@@ -124,7 +123,6 @@ comment1 = Comment.create( user_id: u1.id, actor_id: a2.id, review: "I love your
 comment2 = Comment.create( user_id: u2.id, actor_id: a3.id, review: "I know how you act like a professional actor, you will do better projects soon "  )
 
 comment3 = Comment.create( user_id: u4.id, actor_id: a1.id, review: "I'm not sure you get more jobs, but, I believe you get more roles" )
-
 
 favorite1 = Favorite.create( user_id: u2.id, actor_id: a1.id  )
 
