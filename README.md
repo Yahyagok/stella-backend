@@ -24,4 +24,4 @@ Things you may want to cover:
 * ...
 # stella-backend
 
-this repo is the backend for Stalla Project. It built with Ruby on Rails. 
+this repo is the backend for the Stella Project. It built with Ruby on Rails. 
